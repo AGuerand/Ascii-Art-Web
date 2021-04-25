@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Text to ASCII Art Generator</title>
+  <meta charset="utf-8" />
+  <title>HTML Meta Tag</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="imagee.jpg">
+
+  <style>
+    .ZoneAscci {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      top: 71px;
+      height:400px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form method="POST">
+    <link rel="stylesheet" href="css.css" />
+    <div class="slider">
+      <div class="slide1">
+        <ul>
+          <li id="no-js-slider-1" name="slide1" class="slide">
+            <div class="Fond2" style="z-index: -1"></div>
+            <div class="Fond" style="z-index: -1"></div>
+            <div class="FondImage">
+            </div>
+            <!--<img src="https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg">
+             <!--changement boutton ici-->
+          <div class="intro">    
+             <h1>&nbsp;&nbsp;Bienvenue sur notre</h1> 
+             <h1></h1>page asciiartweb</h1><br><br>
+             <p>&nbsp;&nbsp;Veuillez choisir votre type de police en cliquant sur les images ci-dessous</p>
+             <p>&nbsp;&nbsp;ou en cliquant sur les flèches sur le bord de votre écran</p>
+          </div>
+            
+            <a href="http://localhost:8080/#no-js-slider-2">
+              <img class="standardimage" src="standard.PNG">
+            </a>
+            <a href="http://localhost:8080/#no-js-slider-3">
+              <img class="thinkertoyimage" src="thinkertoy.PNG">
+            </a>
+            <a href="http://localhost:8080/#no-js-slider-4">
+              <img class="shadowimage" src="shadow.PNG">
+            </a>
+            
+             <!--a la-->
+            <a class="prev" href="#no-js-slider-4">prev</a>
+            <a class="next" href="#no-js-slider-2">next</a>
+          </li>
+      </div>
+      <div class="slide2">
+        <li id="no-js-slider-2" name="slide2" class="slide">
+          <!--download d'ici-->
+          <a href="AsciiArt.txt" download>
+            <img src="download.png" class="download"/>
+          </a>
+          <!--a la-->
+          <!-- commence ici -->
+          <div class="navigation-bar1">
+            <div class="bar">
+              <div class="inside-bar">
+                <div class="input">
+                  <label for="input1">Enter Text Standard</label><br>
+                  <p></p>
+                  <input type="text" id="input1" name="argStandard" placeholder="input"><br><br>
+                  <input type="submit" href="#no-js-slider-2" name="police" value="standard"><br><br>
+                </div>
+              </div>
+            </div>
+          </div>      
+          <!-- finit ici -->
+          <!--Ici le boutton home-->
+          <div class="ZoneAscci">
+            {{range .ASCIIWords}}   
+            <pre> {{.}} </pre> 
+           {{end}}
+          </div>
+                <a href="http://localhost:8080/#no-js-slider-1">
+                  <img class="homeimage" src="home.png">
+                </a>
+                <!--button finit ici-->
+                <a class="prev" href="#no-js-slider-1">prev</a>
+                <a class="next" href="#no-js-slider-3">next</a>
+        </li>
+      </div>
+      <div class="slide3">
+        <li id="no-js-slider-3" name="slide3" class="slide">
+          <!--download d'ici-->
+          <a href="AsciiArt.txt" download>
+            <img src="download.png" class="download"/>
+         </a>
+          <!--a la-->
+          <!-- sa commence la, sa marche pas si y'a une image en background  -->
+          <div class="navigation-bar2">
+            <div class="bar">
+              <div class="inside-bar">
+                <div class="input">
+                  <label for="input2">Enter Text Thinkertoy</label><br>
+                  <p></p>
+                  <input type="text" id="input2" name="argThinkertoy" placeholder="input"><br><br>
+                  <input type="submit" href="#no-js-slider-3" name="police" value="thinkertoy"><br><br>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="ZoneAscci">
+            {{range .ASCIIWords}}   
+               <pre> {{.}} </pre>
+           {{end}}
+          </div>
+          <!-- finit ici -->
+          <!--Ici le boutton home-->
+                <a href="http://localhost:8080/#no-js-slider-1">
+                  <img class="homeimage" src="home.png">
+                </a>
+                <!--button finit ici-->
+                  <a class="prev" href="#no-js-slider-2">prev</a>
+                  <a class="next" href="#no-js-slider-4">next</a>
+        </li>
+      </div>
+      <div class="slide4">
+        <li id="no-js-slider-4" name="slide4" class="slide">
+          <!--download d'ici-->
+          <a href="AsciiArt.txt" download>
+            <img src="download.png" class="download"/>
+         </a>
+          <!--a la-->
+          <!-- commence ici -->
+          <div class="navigation-bar3">
+            <div class="bar">
+              <div class="inside-bar">
+                <div class="input">
+                  <label for="input3">Enter Text Shadow</label><br>
+                  <p></p>
+                  <input type="text" id="input3" name="argShadow" placeholder="input"><br><br>
+                  <input type="submit" href="#no-js-slider-4" name="police" value="shadow"><br><br>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="ZoneAscci">
+            {{range .ASCIIWords}}   
+               <pre> {{.}} </pre>
+           {{end}}
+          </div>
+          <!-- finit ici -->
+                   <!--Ici le boutton home-->
+                <a href="http://localhost:8080/#no-js-slider-1">
+                  <img class="homeimage" src="home.png">
+                </a>
+                <!--button finit ici-->
+                  <a class="prev" href="#no-js-slider-3">prev</a>
+                  <a class="next" href="#no-js-slider-1">next</a>
+        </li>
+      </div>
+  </form>
+  <div class="slide5">
+    <li id="no-js-slider-5" name="slide5" class="slide">
+      <!-- il faut une slide vide avec un background blanc sinon toute les pages se supperpose -->
+      <img src="https://www.peintures1825.fr/wp-content/uploads/2018/04/1998_1-1.jpg">
+      <a class="prev" href="#no-js-slider-4">prev</a>
+      <a class="next" href="#no-js-slider-1">next</a>
+    </li>
+  </div>
+  </li>
+  </ul>
+  </div>
+  <style>
+/*les changement commence la*/ 
+  .Fond2{
+      background-image: url("https://i.ytimg.com/vi/YTiIje8EZF0/maxresdefault.jpg");
+      background-size: 100% 100%;
+      height:50%;
+      width:50%;
+      left:370px;
+      top:350px;
+      position: absolute;
+    }
+
+    .Fond{
+      background-image: url("https://raw.githubusercontent.com/dawsonbooth/ascii-art/master/logo.png");
+      background-size: 100% 100%;
+      height:20%;
+      width:20%;
+      left:50px;
+      top:20px;
+      position: absolute;
+    }
+   /*pour de future utilisation un carré blanc derriere les bouttons asccii demo*/
+    .FondImage{
+    background-color: white;
+    height:180px;
+      width:660px;
+      left:430px;
+      top:280px;
+      position: absolute;
+    }
+    .intro{
+      background-color: rgb(0, 193, 207);
+      height: 167px;
+      width: 500px;
+      margin-left: 33%;
+      border-style: solid;
+      border-radius: 6px;
+      border-color: rgb(48, 58, 66);
+    }
+
+    .download{
+      height:110px;
+      width:150px;
+      left:100px;
+      top:580px;
+    }
+
+    .standardimage {
+      height:140px;
+      width:120px;
+      left:460px;
+      top:300px;
+      position: absolute;
+    }
+    .standardimage:hover {
+      transition-duration: 0.2s;
+      border: 2px solid #888888;
+    }
+
+    .thinkertoyimage {
+      height:140px;
+      width:120px;
+      left:700px;
+      top:300px;
+      position: absolute;
+    }
+    .thinkertoyimage:hover {
+      transition-duration: 0.2s;
+      border: 2px solid #ff7300;
+    }
+
+    .shadowimage {
+      height:140px;
+      width:120px;
+      left:940px;
+      top:300px;
+      position: absolute;
+    }
+    .shadowimage:hover {
+      transition-duration: 0.2s;
+      border: 2px solid #3f3e3e;
+    }
+
+    .homeimage {
+      height:70px;
+      width:70px;
+      left:1400px;
+      top:600px;
+    }
+    
+/* finit ici */
+
+/*ici pour pas que l'on puissescroll de coté*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+    .navigation-bar1 {
+      background-image: url('http://www.pxleyes.com/images/contests/city-skyline/fullsize/City-panorama-4f80510cc827d_hires.jpg');
+      background-size: 100% 100%;
+      height: 170px;
+      padding: 10px;
+      width: 100%;
+    }
+    .navigation-bar2 {
+      background-image: url('https://images2.alphacoders.com/884/884331.jpg');
+      background-size: 100% 300%;
+      height: 170px;
+      padding: 10px;
+      width: 100%;
+    }
+
+
+    .navigation-bar3 {
+      background-image: url('https://amazingsky.files.wordpress.com/2019/06/9-spring-sky-panorama-at-dinosaur-park.jpg');
+      background-size: 100% 100%;
+      height: 170px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .bar {
+      background-color: #262b38;
+      height: 167px;
+      width: 500px;
+      margin-left: 34%;
+      border-style: solid;
+      border-radius: 6px;
+      border-color: rgb(81, 108, 131);
+    }
+
+    .inside-bar {
+      font-family: Verdana, arial, helvetica, sans-serif;
+      font-size: 12px;
+      color: white;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+
+    @-webkit-keyframes TMNT {
+      0% {
+        left: 0px;
+      }
+
+      100% {
+        left: -1200px;
+      }
+    }
+
+    a.prev,
+    a.next {
+      height: 91px;
+      position: absolute;
+      width: 43px;
+      top: 50%;
+      margin-top: -30px;
+      opacity: 0.6;
+      text-indent: -99999px;
+      cursor: pointer;
+      -webkit-transition: opacity 200ms ease-out;
+    }
+
+    a.prev:hover,
+    a.next:hover {
+      opacity: 1;
+    }
+
+    .prev {
+      left: 0;
+      background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -200px 25px;
+    }
+
+    .next {
+      right: 0;
+      background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -167px 25px;
+    }
+
+    .slider {
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    .slider .slide:target {
+      z-index: 100;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      position: fixed;
+      left: 0;
+    }
+  </style>
+</body>
+
+</html>
